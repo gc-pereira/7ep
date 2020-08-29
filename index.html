@@ -7,7 +7,7 @@
     <title>7EP</title>
 </head>
 <body>
-
+    
     <header>
         <div id="menu-bar">
             <div id="menu">
@@ -24,35 +24,23 @@
         <img src="img/7ep-logo.png" alt="Logo da república 7eh Poko">
     </header>
     <div class="menu-bg" id="menu-bg"></div>
-
-    <main>
-        <div class="dh_carousel">
     
-            <div class="slide fade">
-                <img class = "imagem-passador" src="img/img1.jpg">
-            </div>
-                
-            <div class="slide fade">
-                <img class = "imagem-passador" src="img/img2.jpg">
-            </div>
-                
-            <div class="slide fade">
-                <img class = "imagem-passador" src="img/img5.jpg">
-            </div>
-                <a class="anterior" onclick="outroSlide(-1)">&#10094;</a>
-                <a class="proximo" onclick="outroSlide(1)">&#10095;</a>
-    
-                <br>
-                
-                <div class="marcadores">
-                    <span class="bola" onclick="slideAtual(1)"></span> 
-                    <span class="bola" onclick="slideAtual(2)"></span> 
-                    <span class="bola" onclick="slideAtual(3)"></span> 
-                </div>
-        </div>
-    </main>
-
     <div class="principal">
+      <main>
+        <img class = "flyer" src="img/Sem título.png" alt = "arte república 7 eh poko"/>
+      </main>
+      
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi asperiores temporibus eaque unde, sint vel cum 
+      blanditiis facere ipsam iste, cumque non deleniti doloremque dolore. Ipsa cumque perspiciatis aliquid dolorum.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam eos minima quaerat illo aut vel veritatis magnam 
+      voluptate ab, ipsa quae eveniet, vitae dolorum beatae omnis nisi pariatur sit repellendus.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quas perspiciatis pariatur aperiam nostrum 
+        laudantium totam dolores harum corrupti blanditiis? Ex delectus sequi molestiae veritatis dolores quae, accusantium 
+        ullam temporibus.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus tempora debitis exercitationem, 
+        nostrum maiores repellendus unde blanditiis nobis dolorum autem soluta? Perferendis consequatur laboriosam ex? 
+        Sint excepturi et blanditiis perspiciatis.
+        
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi asperiores temporibus eaque unde, sint vel cum 
         blanditiis facere ipsam iste, cumque non deleniti doloremque dolore. Ipsa cumque perspiciatis aliquid dolorum.
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam eos minima quaerat illo aut vel veritatis magnam 
@@ -63,7 +51,7 @@
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus tempora debitis exercitationem, 
         nostrum maiores repellendus unde blanditiis nobis dolorum autem soluta? Perferendis consequatur laboriosam ex? 
         Sint excepturi et blanditiis perspiciatis.
-
+        
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi asperiores temporibus eaque unde, sint vel cum 
         blanditiis facere ipsam iste, cumque non deleniti doloremque dolore. Ipsa cumque perspiciatis aliquid dolorum.
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam eos minima quaerat illo aut vel veritatis magnam 
@@ -74,19 +62,38 @@
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus tempora debitis exercitationem, 
         nostrum maiores repellendus unde blanditiis nobis dolorum autem soluta? Perferendis consequatur laboriosam ex? 
         Sint excepturi et blanditiis perspiciatis.
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi asperiores temporibus eaque unde, sint vel cum 
-        blanditiis facere ipsam iste, cumque non deleniti doloremque dolore. Ipsa cumque perspiciatis aliquid dolorum.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam eos minima quaerat illo aut vel veritatis magnam 
-        voluptate ab, ipsa quae eveniet, vitae dolorum beatae omnis nisi pariatur sit repellendus.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quas perspiciatis pariatur aperiam nostrum 
-        laudantium totam dolores harum corrupti blanditiis? Ex delectus sequi molestiae veritatis dolores quae, accusantium 
-        ullam temporibus.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus tempora debitis exercitationem, 
-        nostrum maiores repellendus unde blanditiis nobis dolorum autem soluta? Perferendis consequatur laboriosam ex? 
-        Sint excepturi et blanditiis perspiciatis.
-
-    </div>
-    <script src="main.js"></script>
-</body>
+        <div class="slideshow-container">
+    
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="img/img.jpg" class = "img-passador" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="img/img2.jpg" class = "img-passador" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="img/img5.jpg" class = "img-passador" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+      </div>
+      <script src="main.js"></script>
+    </body>
 </html>
