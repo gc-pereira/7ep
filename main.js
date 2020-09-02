@@ -16,43 +16,36 @@ document.querySelector('#menu').addEventListener('click', () =>{
 
 //Carrossel
 
-var indice = 1;
-passador(indice);
+/* AS variaveis definidas a são da forma de arrays, por isso nesses condicionais irei pegar 
+o tamanho desse array para fazer o carrousel funcionar. Nesse primeiro if estou tratando quando o
+parâmetro dessa função for maior que a quantidade de slides ou seja, se for maior o indice será igual a 1
+se for menor o indice será igual a quantidade de slides. Para as repetiçoes, para cada slide, os outros
+ficaram com display none, assim eles não aparecerão na tela na outra repetição está sendo trocada as 
+configurações CSS*/
 
-function outroSlide(indicador) {
-  passador(indice += indicador);
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function slideAtual(indicador) {
-  passador(indice = indicador);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-function passador(indicador){
-    var i;
-    var slide = document.getElementsByClassName("slide"); // div que contem as imagens
-    var pontos = document.getElementsByClassName("bola"); // bolinhas que ficam no rodapé da imagem
-
-    console.log(slide.length);
-
-    /* AS variaveis definidas a cima são da forma de arrays, por isso nesses condicionais irei pegar 
-    o tamanho desse array para fazer o carrousel funcionar. Nesse primeiro if estou tratando quando o
-    parâmetro dessa função for maior que a quantidade de slides ou seja, se for maior o indice será igual a 1
-    se for menor o indice será igual a quantidade de slides. Para as repetiçoes, para cada slide, os outros
-    ficaram com display none, assim eles não aparecerão na tela na outra repetição está sendo trocada as 
-    configurações CSS*/
-
-    if(indicador > slide.length){
-        indice = 1;
-    }
-    if(indicador < 1){
-        indice = slide.length;
-    }
-    for(i = 0; i < slide.length; i++){
-        slide[i].style.display = "none";
-    }
-    for(i=0; i< pontos.length; i++){
-        pontos[i].className = pontos[i].className.replace(" ball-color", "")
-    }
-    slide[indice-1].style.display = "block";
-    pontos[indice-1].className = pontos[indice-1].className + " ball-color"
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
